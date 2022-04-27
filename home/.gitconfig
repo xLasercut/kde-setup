@@ -1,0 +1,11 @@
+[user]
+    email = tianxun.wang2004@gmail.com
+    name = xLasercut
+[credential]
+    helper = store
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[core]
+    editor = vim
