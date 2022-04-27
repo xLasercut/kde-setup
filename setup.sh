@@ -14,7 +14,7 @@ function _create_dir() {
 }
 
 function _install_packages() {
-    sudo pacman -S i3-gaps rofi feh
+    sudo pacman -S i3-gaps rofi feh picom
 }
 
 function _setup_i3() {
@@ -24,8 +24,19 @@ function _setup_i3() {
     ln -s "$REPO_HOME_DIR/.config/i3/config" "$i3_dir/config"
 }
 
+function _setup_picom() {
+    local picom_dir="$HOME_DIR/.config/picom"
+    _create_dir $picom_dir
+
+    ln -s "$REPO_HOME_DIR/.config/picom/picom.conf" "$picom_dir/picom.conf"
+}
+
 function _setup_rofi() {
-    cp -r "$REPO_HOME_DIR/.config/rofi/." "$HOME_DIR/.config/rofi" 
+    local rofi_dir="$HOME_DIR/.config/rofi" 
+    _create_dir $rofi_dir
+
+    ln -s "$REPO_HOME_DIR/.config/rofi/config.rasi" "$rofi_dir/config.rasi" 
+    ln -s "$REPO_HOME_DIR/.config/rofi/nord.rasi" "$rofi_dir/nord.rasi" 
 }
 
 function _setup_fonts() {
@@ -57,6 +68,7 @@ function _setup_home_dots() {
 _install_packages
 _setup_desktopsession
 _setup_i3
+_setup_picom
 _setup_fonts
 _setup_local
 _setup_antigen

@@ -180,7 +180,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Set wallpaper with feh
-exec --no-startup-id feh --bg-fill ~/.local/share/wallpaper/nord.png
+exec --no-startup-id feh --bg-fill ~/.local/share/wallpaper/ign_circuit.png
+exec --no-startup-id picom
 
 # Kill the wallpaper window set by Plasma*
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
@@ -201,3 +202,12 @@ no_focus [class="plasmashell" window_type="notification"]
 
 # Set other stuff as floating
 for_window [class="(?i)*nextcloud*"] floating disable
+
+# gaps
+for_window [class=".*"] border pixel 1
+gaps inner 10
+
+
+# theme
+client.focused #5e81ac #5e81ac #eceff4
+client.unfocused #5e81ac #3b4252 #d8dee9
