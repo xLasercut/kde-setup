@@ -60,9 +60,11 @@ function _setup_desktopsession() {
 }
 
 function _setup_home_dots() {
-    cp "$REPO_HOME_DIR/.zshrc" $HOME_DIR
     cp "$REPO_HOME_DIR/.imwheelrc" $HOME_DIR
-    cp "$REPO_HOME_DIR/.gitconfig" $HOME_DIR
+}
+
+function _setup_programs() {
+    cp -r "$REPO_DIR/programs/." "$HOME_DIR/programs/"
 }
 
 _install_packages
@@ -73,4 +75,5 @@ _setup_fonts
 _setup_local
 _setup_antigen
 _setup_home_dots
+_setup_programs
 _setup_rofi
