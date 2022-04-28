@@ -181,7 +181,7 @@ bindsym $mod+r mode "resize"
 
 # Set wallpaper with feh
 exec --no-startup-id feh --bg-fill ~/.local/share/wallpaper/ign_circuit.png
-exec --no-startup-id picom
+exec --no-startup-id picom --blur-background
 
 # Kill the wallpaper window set by Plasma*
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
@@ -209,5 +209,5 @@ gaps inner 10
 
 
 # theme
-client.focused #5e81ac #5e81ac #eceff4
-client.unfocused #5e81ac #3b4252 #d8dee9
+client.focused #5e81ac #5e81ac #eceff4 #5e81ac
+client.unfocused #5e81ac #3b4252 #d8dee9 #5e81ac
