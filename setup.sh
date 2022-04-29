@@ -64,7 +64,7 @@ function _setup_home_dots() {
 }
 
 function _setup_programs() {
-    cp -r "$REPO_DIR/programs/." "$HOME_DIR/programs/"
+    cp -r "$REPO_HOME_DIR/programs/." "$HOME_DIR/programs/"
 }
 
 _install_packages
