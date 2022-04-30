@@ -52,7 +52,7 @@ function _setup_antigen() {
     if [[ -d $antigen_dir ]]; then 
         rm -rf $antigen_dir 
     fi
-    git clone git@github.com:zsh-users/antigen.git $antigen_dir
+    git clone https://github.com/zsh-users/antigen.git $antigen_dir
 }
 
 function _setup_desktopsession() {
