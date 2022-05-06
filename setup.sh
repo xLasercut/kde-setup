@@ -17,7 +17,7 @@ popd
 
 # set kde max windows no border
 echo "[Windows]" >> ~/.config/kwinrc
-echo "HighlightWindows=false" >> ~/.config/kwinrc
+echo "BorderlessMaximizeWindows=true" >> ~/.config/kwinrc
 
 # update system
 sudo pacman -Syyu
