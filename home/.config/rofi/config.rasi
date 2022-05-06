@@ -1,5 +1,0 @@
-configuration {
-  modi: "run,drun";
-  font: "hack 10";
-}
-@theme "nord"
