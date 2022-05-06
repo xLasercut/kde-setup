@@ -21,7 +21,7 @@ echo "HighlightWindows=false" >> ~/.config/kwinrc
 
 # update system
 sudo pacman -Syyu
-sudo pacman -S vim plasma5-applets-window-buttons gufw zsh
+sudo pacman -S vim plasma5-applets-window-buttons gufw zsh imwheel
 
 # change shell
 chsh -s /bin/zsh
