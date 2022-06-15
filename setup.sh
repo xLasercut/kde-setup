@@ -19,6 +19,9 @@ popd
 echo "[Windows]" >> ~/.config/kwinrc
 echo "BorderlessMaximizedWindows=true" >> ~/.config/kwinrc
 
+# copy pacman cache
+sudo cp ./pacman/98-clear-paccache.hook /etc/pacman.d/hooks/
+
 # update system
 sudo pacman -Syyu
 sudo pacman -S vim plasma5-applets-window-buttons gufw zsh imwheel
